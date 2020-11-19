@@ -1,0 +1,173 @@
+// =================================== //
+//  Start Features Styles//
+// =================================== //
+.features-area {
+}
+
+.single-features {
+	background: $offwhite;
+	padding: 30px;
+	border-radius: 5px;
+	margin-bottom: 50px;
+	@include transition();
+	@media (max-width: 767px) {
+		margin-bottom: 30px;
+	}
+	@media (max-width: 575px) {
+		margin-bottom: 50px;
+	}
+	.features-icon {
+		position: relative;
+		display: inline-block;
+		height: 100px;
+		width: 100px;
+		background: $white;
+		border-radius: 50%;
+		@include transition();
+		img {
+			@include transition();
+		}
+	}
+	.features-content {
+		h4 {
+			font-weight: 500;
+			margin: 30px 0px 20px;
+		}
+		p {
+			margin: 0;
+		}
+	}
+	&:hover {
+		background: $white;
+		box-shadow: 0px 20px 50px 0 rgba(105, 0, 255, 0.1);
+		.features-icon {
+			@include gradient(90deg, $primary-color2 0%, $primary-color 100%);
+			box-shadow: 0px 10px 30px 0 rgba(124, 33, 255, 0.3);
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+}
+
+// =================================== //
+//  End Features Styles//
+// =================================== //
+// =================================== //
+//  Start Another Features Styles//
+// =================================== //
+.another-feature-area {
+	padding: 150px 0px 50px;
+	@media (max-width: 991px) {
+		padding: 60px 0px 0px;
+	}
+	.service-left {
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	.round-img {
+		position: absolute;
+		left: 0;
+		top: 16%;
+		z-index: -1;
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	.section-title {
+		text-align: left !important;
+		margin-bottom: 80px;
+		@media (max-width: 991px) {
+			margin-bottom: 40px;
+		}
+		h2 {
+			margin: 20px 0 10px;
+		}
+		.lines {
+			margin-left: 31px;
+		}
+	}
+	.mn-accordion .accordion-item .accordion-heading {
+		border-bottom: 1px solid #eeeeee;
+		position: relative;
+		cursor: pointer;
+		padding: 25px 0;
+	}
+	.mn-accordion .state-open {
+		.accordion-heading {
+			@include transition();
+		}
+		.accordion-content {
+			border-bottom: 1px solid #eeeeee;
+		}
+	}
+	.mn-accordion .state-open .accordion-heading.blue-color {
+		.icon {
+			@extend .gradient-bg;
+			box-shadow: 0px 10px 30px 0 rgba(124, 33, 255, 0.3);
+			span.lnr {
+				color: $white;
+			}
+		}
+	}
+	.mn-accordion .accordion-item .accordion-heading .icon {
+		position: absolute;
+		top: 50%;
+		right: 0%;
+		margin-top: -17px;
+		height: 35px;
+		width: 35px;
+		background: $offwhite;
+		line-height: 38px;
+		text-align: center;
+		border-radius: 50%;
+		span.lnr {
+			color: #919191;
+		}
+	}
+	.mn-accordion .accordion-item .accordion-heading .icon span.lnr {
+		display: inline-block;
+		font-size: 15px;
+		font-weight: 900;
+		color: #000;
+		@include transition();
+	}
+	.mn-accordion .accordion-item .accordion-heading .icon span.lnr {
+		@include transform(rotate(180deg));
+	}
+	.mn-accordion .accordion-item .accordion-heading h4 {
+		color: $title-color;
+		margin: 0;
+		font-weight: 500;
+		text-transform: capitalize;
+		@media (max-width: 767px) {
+			font-size: 16px;
+			max-width: 90%;
+		}
+	}
+	.mn-accordion .accordion-item .accordion-content {
+		overflow: hidden;
+		height: 0;
+		@include transition(all 0.8s ease);
+		background: transparent;
+		position: relative;
+		z-index: 99;
+	}
+	.mn-accordion .accordion-item .accordion-content p:first-child {
+		margin-top: 0;
+	}
+	.mn-accordion .accordion-item .accordion-content p:last-child {
+		margin-bottom: 0;
+	}
+	.mn-accordion .accordion-item .accordion-content > * {
+		padding: 25px 0;
+	}
+	.mn-accordion .accordion-item.state-open .accordion-heading .icon span.lnr {
+		@include transform(rotate(0deg));
+	}
+}
+
+// =================================== //
+//  End Another Features Styles//
+// =================================== //
